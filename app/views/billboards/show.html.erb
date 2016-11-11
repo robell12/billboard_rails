@@ -1,0 +1,16 @@
+<h1 class='center green-text text-darken-2'>This is your Billboard</h1>
+	<div class="right">
+		<h3><%= @billboard.name %>
+				<%= @billboard.total %>
+			</h3>
+	</div>
+			<div class="btn-large yellow">
+				<%= link_to 'Edit', edit_billboard_path(@billboard)%>
+			</div>
+			<div class="btn-large red">
+			<%= link_to 'Delete', billboard_path(@billboard), method: :delete, data: {confirm: 'You sure'} %>
+			</div>
+			<div class="btn-large orange">
+			<%= link_to 'Add/See Artists', billboard_artists_path(@billboard, @artist) %>
+			</div>
+		

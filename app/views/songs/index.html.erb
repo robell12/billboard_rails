@@ -1,0 +1,12 @@
+<h1 class="center blue-text text-accent-4">The song list</h1>
+<div class="center">
+<%= link_to 'Add Song', new_artist_song_path, class: "btn green white-text" %>
+</div>
+<hr />
+<ul class="collection">
+	<% @songs.each do |song| %>
+		<li class="collection-item">
+			<%= link_to song.title, artist_song_path(@artist, song) %>
+		</li>
+	<% end %>
+</ul>

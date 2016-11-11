@@ -1,0 +1,20 @@
+<h1>Add an song</h1>
+<div class="container">
+  <div class="row">
+    <%= form_for [@artist, @song] do |f| %>
+      <div class="col m6">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+      <div class="col m6">
+        <%= f.label :album %>
+        <%= f.text_field :album %>
+      </div>
+      <div class="col m6">
+        <%= f.label :release_date %>
+        <%= f.date_field(:release_date) %>
+      </div>
+      <%= f.submit class: "btn black white-text" %>
+    <% end %>
+  </div>
+</div>

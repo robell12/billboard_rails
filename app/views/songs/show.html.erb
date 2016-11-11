@@ -1,0 +1,8 @@
+<h1 class='center green-text text-darken-2'>Song</h1>
+	<div class="right">
+		<h3><%= @song.title %></h3>
+		<h3><%= @song.album %></h3>
+		<h3><%= @song.release_date %></h3>
+		</div>
+			<%= link_to 'Edit', edit_artist_song_path(@artist, @song)%>
+			<%= link_to 'Delete', artist_song_path(@artist, @song), method: :delete, data: {confirm: 'You sure'} %>

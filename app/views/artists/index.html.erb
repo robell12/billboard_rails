@@ -1,0 +1,12 @@
+<h1 class="center blue-text text-accent-4">The artist list</h1>
+<div class="center">
+<%= link_to 'Add Artist', new_billboard_artist_path, class: "btn green white-text" %>
+</div>
+<hr />
+<ul class="collection">
+	<% @artists.each do |artist| %>
+		<li class="collection-item">
+			<%= link_to artist.name, billboard_artist_path(@billboard, artist) %>
+		</li>
+	<% end %>
+</ul>

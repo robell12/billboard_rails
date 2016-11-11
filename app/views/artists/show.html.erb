@@ -1,0 +1,16 @@
+<h1 class='center green-text text-darken-2'>Artist</h1>
+	<div class="right">
+		<h3><%= @artist.name %></h3>
+		<h3><%= @artist.genre %></h3>
+		<h3><%= @artist.rating %></h3>
+		<h3><%= @artist.bio %></h3>
+	</div>
+			<div class="btn-large yellow">
+				<%= link_to 'Edit', edit_billboard_artist_path(@billboard, @artist)%>
+			</div>
+			<div class="btn-large red">
+				<%= link_to 'Delete', artists_path(@artist), method: :delete, data: {confirm: 'You sure'} %>
+			</div>
+			<div class="btn-large orange">
+				<%= link_to 'Add Song', artist_songs_path(@artist, @song) %>
+			</div>
